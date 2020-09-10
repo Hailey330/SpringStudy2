@@ -1,0 +1,5 @@
+package com.cos.instagram.web.dto;
+
+public class CommentRespDto {
+
+}

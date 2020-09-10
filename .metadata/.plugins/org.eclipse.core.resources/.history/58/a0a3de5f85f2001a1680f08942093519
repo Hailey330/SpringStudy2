@@ -1,0 +1,35 @@
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+
+function sendTeam() {	
+	var data = {
+		      team : $("#frm").val()
+		   };
+
+		   $.ajax({
+		      type : "post",
+		      url : "/main/save/player",
+		      data : JSON.stringify(data),
+		      contentType : "application/json; charset=utf-8",
+		      dataType : "json"
+		   }).done(function(result) {
+		      console.log(result);
+		   }).fail(function(error) {
+		      alert("실패");
+		   });
+		}

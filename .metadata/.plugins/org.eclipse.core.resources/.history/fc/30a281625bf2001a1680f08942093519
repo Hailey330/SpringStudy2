@@ -1,0 +1,11 @@
+package com.cos.baseballproject.domain.stardium;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface StardiumRepository extends JpaRepository<Stardium, Integer>{
+
+	public delete(Optional<Stardium> stardiumEntity);
+
+}

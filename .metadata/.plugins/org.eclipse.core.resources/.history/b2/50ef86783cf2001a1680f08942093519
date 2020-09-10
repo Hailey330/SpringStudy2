@@ -1,0 +1,23 @@
+package com.cos.baseballproject.domain.Outplayer;
+
+import javax.persistence.Entity;
+
+import com.cos.baseballproject.domain.stardium.Stardium;
+import com.cos.baseballproject.domain.stardium.Stardium.StardiumBuilder;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Outplayer {
+	private int id;
+	private int playerId;
+	private String reason;
+	private String day;
+}

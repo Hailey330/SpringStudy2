@@ -1,0 +1,13 @@
+package com.cos.baseballproject.service;
+
+import org.springframework.stereotype.Service;
+
+import com.cos.baseballproject.domain.stardium.StardiumRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Service
+public class PlayerService {
+
+}

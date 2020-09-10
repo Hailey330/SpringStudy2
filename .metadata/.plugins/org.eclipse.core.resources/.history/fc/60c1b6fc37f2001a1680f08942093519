@@ -1,0 +1,5 @@
+package com.cos.baseballproject.domain.out;
+
+public class Out {
+
+}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Springboot-JWT-React-OAuth2.0-Eazy-master&apos;" deleteContents="true" description="Delete resource &apos;Springboot-JWT-React-OAuth2.0-Eazy-master&apos;" element1="/Springboot-JWT-React-OAuth2.0-Eazy-master" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1597808255257"/>&#x0A;<refactoring comment="Delete resource &apos;Springboot-Security-JWT-Easy-master&apos;" deleteContents="false" description="Delete resource &apos;Springboot-Security-JWT-Easy-master&apos;" element1="/Springboot-Security-JWT-Easy-master" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1597826154865"/>
+</session>

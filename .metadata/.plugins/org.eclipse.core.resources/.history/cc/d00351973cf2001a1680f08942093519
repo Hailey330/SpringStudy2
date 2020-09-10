@@ -1,0 +1,5 @@
+package com.cos.baseballproject.domain.player;
+
+public class PlayerRepository {
+
+}

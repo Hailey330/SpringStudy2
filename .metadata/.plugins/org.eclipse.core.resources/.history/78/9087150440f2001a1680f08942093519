@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>야구 관리 프로그램</title>
+</head>
+<body>
+<h1>등록 / 야구장, 야구팀(포지션 별로 선수 뿌리기), 선수 목록 및 삭제 / 퇴출선수 등록 </h1>
+</body>
+</html>

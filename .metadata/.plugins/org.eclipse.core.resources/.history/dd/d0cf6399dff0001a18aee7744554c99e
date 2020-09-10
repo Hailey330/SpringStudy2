@@ -1,0 +1,44 @@
+package com.cos.instagram.web;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.cos.instagram.config.auth.LoginUserAnnotation;
+import com.cos.instagram.config.auth.dto.LoginUser;
+import com.cos.instagram.domain.user.User;
+import com.cos.instagram.domain.user.UserRepository;
+import com.cos.instagram.service.UserService;
+import com.cos.instagram.web.dto.UserProfileRespDto;
+
+@Controller
+public class UserController {
+
+	@Autowired
+	private UserService userService;
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	@GetMapping("/user/{id}")
+	public String profile(@PathVariable int id, @LoginUserAnnotation LoginUser loginUser, Model model) {
+	
+		UserProfileRespDto userProfileRespDto = userService.회원프로필(id, loginUser);
+		model.addAttribute("respDto", userProfileRespDto);
+		return "user/profile";
+	}
+	
+	@GetMapping("/user/profileEdit")
+	public String profileEdit(@LoginUserAnnotation LoginUser loginUser, Model model) {
+		// 모델에 해당 user 정보 들고가야함
+		Optional<User> userEntity = userRepository.findById(loginUser.getId());
+		UserEditRespDto 
+		model.addAttribute("userProfile", userEntity);
+		System.out.println("로긴 user 정보 뿌리기 : " + userEntity);
+		return "user/profile-edit";
+	}
+}

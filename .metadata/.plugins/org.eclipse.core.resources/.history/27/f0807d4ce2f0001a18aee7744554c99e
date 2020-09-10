@@ -1,0 +1,8 @@
+package com.cos.instagram.web.dto;
+
+public class Snippet {
+	public static void main(String[] args) {
+		User
+	}
+}
+

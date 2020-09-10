@@ -1,0 +1,5 @@
+package com.cos.baseballproject.web.dto;
+
+public class StardiumController {
+
+}

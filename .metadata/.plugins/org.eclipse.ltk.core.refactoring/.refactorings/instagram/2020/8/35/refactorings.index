@@ -1,0 +1,16 @@
+1598236762598	Rename type 'Like'
+1598236771261	Rename type 'LikeRepository'
+1598315258259	Rename resource 'join.mustache'
+1598315267411	Rename resource 'login.mustache'
+1598315645939	Delete element
+1598315663124	Copy package
+1598315670493	Delete element
+1598315675232	Delete element
+1598315698239	Move compilation unit
+1598315701811	Delete element
+1598315727506	Rename package 'com.cos.instagram.web.auth'
+1598323959489	Copy compilation unit
+1598408315602	Rename type 'OAuth2UserService'
+1598412957104	Delete element
+1598491436254	Move compilation unit
+1598498051596	Delete element

@@ -1,0 +1,40 @@
+package com.cos.baseballproject.domain.team;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import com.cos.baseballproject.domain.player.Player;
+import com.cos.baseballproject.domain.stardium.Stardium;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Team {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String name;
+	
+	// 한 팀은 하나의 홈구장만 사용
+	@ManyToOne
+	@JoinColumn(name = "stardiumId")
+	private Stardium stardium;
+	
+	// 한 팀에는 여러 명의 선수가 존재
+	@OneToMany
+	private List<Player> players;
+}

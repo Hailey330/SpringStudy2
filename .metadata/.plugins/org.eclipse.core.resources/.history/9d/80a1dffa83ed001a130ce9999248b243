@@ -1,0 +1,22 @@
+{{>layout/header}}
+<main id="explore">
+	<ul class="explore__users u-default-box">
+		{{#followerList}}
+			<li class="explore__user">
+				<div class="explore__content">
+					<a href="/user/{{id}}"></a>
+				<img src="/images/avatar.jpg" />
+				<div class="explore__info">
+					<span class="explore__username">{{username}}o</span> <span
+						class="explore__full-name">{{name}}</span>
+				</div>
+			</div>
+			{{^equalUserState}}
+				{{#followState}}
+				
+		</li>
+	{{/followerList}}	
+</ul>
+</main>
+
+{{>layout/footer}}

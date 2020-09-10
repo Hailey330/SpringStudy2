@@ -1,0 +1,76 @@
+{{>layout/header}}
+
+<main id="edit-profile">
+	<div class="edit-profile__container u-default-box">
+
+		<header class="edit-profile__header">
+			<div class="fucker-container">
+				<img src="/images/avatar.jpg" />
+			</div>
+			<!-- master comments -->
+			<h1 class="edit-profile__username">{{user.username}}</h1>
+		</header>
+		<form id="frm" class="edit-profile__form">
+			<input type="hidden" name="id" value="{{user.id}}"/>
+			<div class="edit-profile__row">
+				<label class="edit-profile__label" for="name">Name</label> 
+				<input name="name" type="text" value="{{user.name}}">
+			</div>
+			<div class="edit-profile__row">
+				<label class="edit-profile__label" for="username">Username</label> 
+				<input type="text" readonly value="{{user.username}}">
+			</div>
+			<div class="edit-profile__row">
+				<label class="edit-profile__label" for="website">Website</label> 
+				<input name="website" type="text" value="{{#user.website}}{{user.website}}{{/user.website}}">
+			</div>
+			<div class="edit-profile__row">
+				<label class="edit-profile__label" for="bio">Bio</label> 
+				<input name="bio" type="text" value="{{#user.bio}}{{user.bio}}{{/user.bio}}">
+			</div>
+			<div class="edit-profile__row">
+				<label class="edit-profile__label" for="email">Email</label> 
+				<input type="email" value="{{user.email}}" readonly>
+			</div>
+			<div class="edit-profile__row">
+				<label class="edit-profile__label" for="phone-number">Phone Number</label> 
+					<input id="phone" type="text" value="">
+			</div>
+			<div class="edit-profile__row">
+				<label class="edit-profile__label" for="">Gender</label> 
+				<select name="gender">
+					<option value="남">Male</option>
+					<option value="여" selected>Female</option>
+				</select>
+			</div>
+			{{/userProfile}}
+			<div class="edit-profile__row">
+				<span></span> 
+				<button onclick="userUpdate()" class="profile_follow_btn" type="button">
+				회원 수정
+				</button>
+			</div>
+		</form>
+
+	</div>
+</main>
+<script>
+	function userUpdate() {
+		let data = $("#frm").serialize();
+		console.log(1, data);
+		
+		fetch("/user", {
+			method: "put",
+			body: data,
+			headers: {
+				"Content-Type" : "application/x-www-form-urlencoded; charset=UTF-8"
+			}
+		}).then(function(res) {
+			return res.text();
+		}).then(function(res) {
+			alert("회원 정보 수정하기가 완료되었습니다.");
+			location.href="/user/1";
+		});
+	}
+</script>
+{{>layout/footer}}

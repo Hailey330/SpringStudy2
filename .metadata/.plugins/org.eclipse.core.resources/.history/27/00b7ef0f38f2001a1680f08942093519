@@ -1,0 +1,6 @@
+package com.cos.baseballproject.domain.stardium;
+
+public class Stardium {
+	private int id;
+	private String zone;
+}

@@ -1,0 +1,23 @@
+{{>nav}}
+
+<br/><br/>
+<div class="container">
+  <h2>홈구장 리스트</h2>
+  <p><code>홈구장 리스트를 확인하고 삭제하세요.</code></p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>홈구장</th>
+        <th>삭제하기</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-light">
+        <td>1</td>
+        <td>{{stardium.zone}}</td>
+        <td><button>삭제</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

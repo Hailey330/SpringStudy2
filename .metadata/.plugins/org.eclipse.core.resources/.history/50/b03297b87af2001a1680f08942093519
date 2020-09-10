@@ -1,0 +1,33 @@
+function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    var forms = document.getElementsByClassName('needs-validation');
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+
+post : function (e) {
+
+    let data = {
+ 		   id : $("#id_").val()
+    };
+
+    $.ajax({
+        type : "POST",
+        url : "/stardium/del/"+ data.id,
+        dataType : "json",
+        contentType : "application/json; charset=utf-8"
+    }).done(function () {
+        location.href = "/stardium/list";
+    }).fail(function (error) {
+        console.log(error);
+    })
+};

@@ -1,0 +1,13 @@
+package com.cos.baseballproject.web;
+
+import org.springframework.stereotype.Controller;
+
+import com.cos.baseballproject.service.StardiumService;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Controller
+public class TeamController {
+
+}

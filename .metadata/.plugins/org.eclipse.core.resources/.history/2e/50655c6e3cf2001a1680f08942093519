@@ -1,0 +1,21 @@
+package com.cos.baseballproject.domain.team;
+
+import javax.persistence.Entity;
+
+import com.cos.baseballproject.domain.stardium.Stardium;
+import com.cos.baseballproject.domain.stardium.Stardium.StardiumBuilder;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Team {
+	private int id;
+	private String name;
+}

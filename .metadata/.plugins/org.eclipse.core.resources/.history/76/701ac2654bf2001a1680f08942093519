@@ -1,0 +1,18 @@
+package com.cos.baseballproject.web;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.cos.baseballproject.domain.stardium.Stardium;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Controller
+public class StardiumController {
+	
+	@GetMapping("/stardium/list")
+	public String stardiumList() {
+		return "stardiumList";
+	}
+}

@@ -1,0 +1,22 @@
+package com.cos.baseballproject.web;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Controller
+public class StardiumController {
+	
+	@GetMapping("/main")
+	public String mainForm() {
+		return "main";
+	}
+	
+	@PostMapping("/stardium/save")
+	public String stardiumSaveForm() {
+		return "";
+	}
+}

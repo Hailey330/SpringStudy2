@@ -1,0 +1,8 @@
+package com.cos.baseballproject.domain.out;
+
+public class Out {
+	private int id;
+	private int playerId;
+	private String reason;
+	private String day;
+}
